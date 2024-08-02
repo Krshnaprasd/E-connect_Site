@@ -1,0 +1,112 @@
+.btn{
+    display: flex;
+    justify-content: end;
+    padding:15px;
+}
+.ofcn{
+    padding:15px;
+    background: none;
+}
+.navlg{
+    background: none;
+}
+.btbg{
+    background: none;
+}
+.bn{
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+}
+.project{  
+    background-image: radial-gradient( circle 343px at 46.3% 47.5%,  rgba(242,242,242,1) 0%, rgba(241,241,241,1) 72.9% );  }
+.butn{
+    background-image: linear-gradient( 110.3deg,  rgba(73,93,109,1) 4.3%, rgba(49,55,82,1) 96.7% );
+    border: #20002c;
+    padding: 10px;
+}
+.mincard{
+    background-image: radial-gradient( circle farthest-corner at -8.9% 51.2%,  rgba(255,124,0,1) 0%, rgba(255,124,0,1) 15.9%, rgba(255,163,77,1) 15.9%, rgba(255,163,77,1) 24.4%, rgba(16, 34, 83, 0.689) 24.5%, rgba(15, 24, 62, 0.808) 66% );
+}
+.profcard{
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,252,200,1) 0%, rgba(255,247,94,1) 90% );
+}
+.navbr{
+    width: 100%;
+    backdrop-filter: blur(5px);
+}
+.bar{
+    background-image: linear-gradient( 63.1deg,  rgba(5,23,111,1) 16.4%, rgba(24,95,240,1) 64.5% );    color: rgba(245, 245, 245, 0.674);}
+.ldicn{
+    background-image: linear-gradient( 112.1deg,  rgba(32,38,57,1) 11.4%, rgba(63,76,119,1) 70.2% );
+    color: rgba(245, 245, 245, 0.674);
+}
+.algn{
+    text-align: justify;
+    
+}
+.iconlist{
+    color: whitesmoke !important;
+}
+.list{
+    list-style: none;
+}
+.ftcard{
+    background-image: linear-gradient( 112.1deg,  rgba(32,38,57,1) 11.4%, rgba(63,76,119,1) 70.2% );
+  
+}
+.logcard{
+    background-image: linear-gradient( 93.2deg,  rgba(24,95,246,1) 14.4%, rgba(27,69,166,1) 90.8% );}
+.custom-small-text{
+    font-size: 0.3em;
+}
+.multiple-text {
+    display: inline; /* Or any appropriate display property */
+    white-space: nowrap; /* Prevents text from wrapping */
+  }
+  
+ .e-txt{
+    -webkit-background-clip:text;
+color: transparent;
+background-image: linear-gradient( 270.3deg,  rgba(84,212,228,1) 0.2%, rgba(68,36,164,1) 100% ); }
+
+.p-txt{
+    background-image: radial-gradient( circle 817.6px at 10% 20%,  rgba(178,34,34,1) 0%, rgba(255,87,51,1) 41.9%, rgba(255,165,0,1) 100.2% );
+    -webkit-background-clip:text;
+color: transparent;
+}
+.h-txt{
+    background-image: linear-gradient( 109.6deg,  rgba(228,107,232,1) 11.2%, rgba(87,27,226,1) 96.7% );
+    -webkit-background-clip:text;
+color: transparent; 
+}
+.r-txt{
+    -webkit-background-clip:text;
+    color: transparent; 
+    background-image: linear-gradient( 93.2deg,  rgba(24,95,246,1) 14.4%, rgba(27,69,166,1) 90.8% );
+}
+.pr-txt{
+    -webkit-background-clip:text;
+    color: transparent; 
+    background-image: linear-gradient( 107.7deg,  rgba(235,230,44,0.55) 8.4%, rgba(252,152,15,1) 90.3% );}
+.pu-txt{
+    background-image: linear-gradient( 109.6deg,  rgba(217,67,67,1) 11.2%, rgba(242,106,75,1) 100.6% );
+    -webkit-background-clip:text;
+    color: transparent; 
+
+}
+.nv-txt{
+    background-image: linear-gradient( 93.2deg,  rgba(24,95,246,1) 14.4%, rgba(27,69,166,1) 90.8% );
+        -webkit-background-clip:text;
+    color: transparent; 
+}
+.custom-dropdown-button {
+     font-size: 0.35rem; /* Adjust the font size to make the button smaller */
+    padding: 0.15rem 0.15rem; /* Adjust padding to reduce button size */
+    background: none !important; /* Remove background color */
+    border: none !important; /* Remove border */
+  }
+
+  .custom-dropdown-button:focus {
+  box-shadow: none; /* Remove focus outline */
+}
