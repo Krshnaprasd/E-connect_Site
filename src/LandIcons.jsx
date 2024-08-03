@@ -1,6 +1,6 @@
 import React from 'react'
 
-const LandIcons = () =>{
+const LandIcons =  () => {
 
 
 
@@ -91,7 +91,7 @@ return(
             <div className="col-md-6 pt-4 pb-3 align-content-center order-md-1 order-2">
             <div className="card border-0 ">
               <button className="pu-txt border-0 fs-2 fw-semibold">
-                Punchlist
+                Punchlists
             </button><br></br>
             <p style={{textAlign:'justify'}}>
 

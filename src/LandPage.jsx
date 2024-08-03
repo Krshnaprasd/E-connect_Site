@@ -151,7 +151,7 @@ const Landpage = () => {
       <div className="container-fluid pt-1 pb-2">
         <ProfilePage />
       </div>
-      <div className="container-fluid">
+      <div className="container-fluid pt-1 pb-1">
         <LandIcons />
       </div>
     </div>
