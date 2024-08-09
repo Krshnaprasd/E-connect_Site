@@ -4,7 +4,7 @@
 // const Demo = () => {
 //     const [users, setUsers] = useState([]);
 
-//     useEffect(() => {
+//     useEffect(() => {  
 //         axios ("https://dummyjson.com/users")
 //             .then(response => response.data)
 //             .then(data => {
@@ -29,3 +29,5 @@
 // }
 
 // export default Demo;
+
+
