@@ -3,6 +3,14 @@ import Swal from 'sweetalert2';
 
 
 const SalaryDetails = () =>{
+
+
+  const [salary] = [
+    {
+      img: "../src/assets/Salary.jpg",
+    }
+  ]
+
   const [ctc, setCtcData] = useState({
     ctc: '',
     basic_salary: '',
@@ -111,20 +119,21 @@ const SalaryDetails = () =>{
   return (
     <>
       <div className="container-fluid">
-        <div className="container mt-5 text-center d-flex justify-content-center">
-          <div className="row mt-3 card mincard" style={{ width: "350px" }}>
-            <div className="col pt-5" style={{ lineHeight: "20px" }}>
-              <label className="fs-4 fw-bolder text-white">Salary Details</label><br /><br />
-              <input type="text" placeholder="Annual Gross Salary" name="ctc" value={ctc.ctc} onChange={handletabChange}></input><br /><br />
-              <input type="text" placeholder="Basic Salary" name="basic_salary" value={ctc.basic_salary} onChange={handletabChange}></input><br /><br />
-              <input type="text" placeholder="Travel Allowance" name="ta" value={ctc.ta} onChange={handletabChange}></input><br /><br />
-              <input type="text" placeholder="Food Allowance" name="fa" value={ctc.fa} onChange={handletabChange}></input><br /><br />
-              <input type="text" placeholder="PF" name="pf" value={ctc.pf} onChange={handletabChange}></input><br /><br />
-              <input type="text" placeholder="ESI" name="esi" value={ctc.esi} onChange={handletabChange}></input><br /><br />
-              <input type="text" placeholder="Overall Salary" name="overall_salary" value={ctc.overall_salary} onChange={handletabChange}></input>
+        <div className="container">
+          <div className="row">
+            <div className="col-md-6 pt-5 mt-2 text-center">
+              <label className="fs-2 fw-bolder">Salary Details</label><br /><br />
+              <input style={{width:300}} type="text" placeholder="Annual Gross Salary" name="ctc" value={ctc.ctc} onChange={handletabChange}></input><br /><br />
+              <input style={{width:300}} type="text" placeholder="Basic Salary" name="basic_salary" value={ctc.basic_salary} onChange={handletabChange}></input><br /><br />
+              <input style={{width:300}} type="text" placeholder="Travel Allowance" name="ta" value={ctc.ta} onChange={handletabChange}></input><br /><br />
+              <input style={{width:300}} type="text" placeholder="Food Allowance" name="fa" value={ctc.fa} onChange={handletabChange}></input><br /><br />
+              <input style={{width:300}} type="text" placeholder="PF" name="pf" value={ctc.pf} onChange={handletabChange}></input><br /><br />
+              <input style={{width:300}} type="text" placeholder="ESI" name="esi" value={ctc.esi} onChange={handletabChange}></input><br /><br />
+              <input style={{width:300}} type="text" placeholder="Overall Salary" name="overall_salary" value={ctc.overall_salary} onChange={handletabChange}></input><br></br><br></br>
+              <button style={{width:300}} className='ctc-butn fw-bolder text-white border-0 pe-3 p-1 ps-3' onClick={sub}>Submit</button>
             </div>
-            <div className='text-center pt-3 pb-5'>
-              <button style={{ width: "9em" }} className='butn text-white border-0 pe-3 p-1 ps-3' onClick={sub}>Submit</button>
+            <div className="col-md-6 pt-4">
+              <img src={salary.img} className='img-fluid' alt="" />
             </div>
           </div>
         </div>

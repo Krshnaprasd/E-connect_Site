@@ -2,6 +2,13 @@ import{ useState } from 'react'
 import Swal from 'sweetalert2';
 
 const VaccantDetails = () =>{
+
+  const [career] = [
+    {
+      img: "../src/assets/Career.jpg",
+    }
+  ]
+
   
   const [job, setJobData] = useState({
     manager: '',
@@ -100,22 +107,24 @@ const VaccantDetails = () =>{
   };
 
   return (
-    <div className="container">
-      <div className="container mt-5 text-center d-flex justify-content-center">
-      <div className="row pt-5 card mincard" style={{ width: "350px" }}>
-      <div className="col" style={{ lineHeight: "20px" }}>
-        <label className="fs-4 fw-bolder text-white">Careers</label><br /><br />
-        <input type="text" placeholder='No.of Managers' name="manager" value={job.manager} onChange={handleChange1} /><br /><br />
-        <input type="text" placeholder='No.of Team Lead' name="team_lead" value={job.team_lead} onChange={handleChange1} /><br /><br />
-        <input type="text" placeholder='No.of Senior Developers' name="senior_developer" value={job.senior_developer} onChange={handleChange1} /><br /><br />
-        <input type="text" placeholder='No.of Junior Developers' name="junior_developer" value={job.junior_developer} onChange={handleChange1} /><br /><br />
-        <input type="text" placeholder='No.of Frontend Developers' name="frontend_developer" value={job.frontend_developer} onChange={handleChange1} /><br /><br />
-        <input type="text" placeholder='No.of Backend Developers' name="backend_developer" value={job.backend_developer} onChange={handleChange1} /><br /><br />
-        <input type="text" placeholder='No.of Training Tutors' name="training_tutors" value={job.training_tutors} onChange={handleChange1} />
+    <div className="container-fluid pt-5 pb-5">
+      <div className="container">
+      <div className="row">
+        <div className="col-md-6 pt-5" style={{zIndex:-1}} >
+          <img src={career.img} className='img-fluid' alt="" />
+        </div>
+      <div className="col-md-6 text-center pt-3" style={{lineHeight:1.5}}>
+        <label className="fs-2 fw-bolder">Job Openings</label><br /><br />
+        <input style={{width:300}} type="text" placeholder='No.of Managers' name="manager" value={job.manager} onChange={handleChange1} /><br /><br />
+        <input style={{width:300}} type="text" placeholder='No.of Team Lead' name="team_lead" value={job.team_lead} onChange={handleChange1} /><br /><br />
+        <input style={{width:300}} type="text" placeholder='No.of Senior Developers' name="senior_developer" value={job.senior_developer} onChange={handleChange1} /><br /><br />
+        <input style={{width:300}} type="text" placeholder='No.of Junior Developers' name="junior_developer" value={job.junior_developer} onChange={handleChange1} /><br /><br />
+        <input style={{width:300}} type="text" placeholder='No.of Frontend Developers' name="frontend_developer" value={job.frontend_developer} onChange={handleChange1} /><br /><br />
+        <input style={{width:300}} type="text" placeholder='No.of Backend Developers' name="backend_developer" value={job.backend_developer} onChange={handleChange1} /><br /><br />
+        <input style={{width:300}} type="text" placeholder='No.of Training Tutors' name="training_tutors" value={job.training_tutors} onChange={handleChange1} /><br></br><br></br>
+        <button style={{width:300}} className="job-butn fw-bolder p-1 text-white border-0" onClick={jobSubmit}>Submit</button>
       </div>
-      <div className='text-center pt-5 pb-5'>
-        <button style={{ width: "9em" }} className="butn p-1 text-white border-0" onClick={jobSubmit}>Submit</button>
-      </div>
+     
     </div>
       </div>
     </div>

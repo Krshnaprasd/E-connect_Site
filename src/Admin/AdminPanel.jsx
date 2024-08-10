@@ -2,10 +2,21 @@ import { useState } from 'react'
 import Nav from 'react-bootstrap/Nav';
 import Swal from 'sweetalert2';
 
+
 const AdminPanel = () => {
 
 
   // --------ADD EMPLOYEE TABLE -----------------------------------
+
+ 
+
+  const style = {
+    backgroundImage: 'url(../src/assets/Admin.jpg)',
+    backgroundSize: 'cover',  
+    backgroundPosition: 'center', 
+    backgroundRepeat: 'no-repeat', 
+    width: '100%',    
+  };
 
   const [staff, setStaffData] = useState({
     name: '',
@@ -210,10 +221,11 @@ const AdminPanel = () => {
           </Nav>
         </div>
       </div>
-      <div className="container-fluid pt-3">
-        <div className="container card mincard">
-          <div className="row text-center pt-3 ">
-            <label className="fs-4 fw-bolder text-white">ADD USERS</label><br /><br />
+      <div className="container-fluid pt-3 img-fluid" style={style}>
+        <div className="container">
+          <div className="row text-center pt-3 "  >
+            <label className="fs-4 fw-bolder">ADD USERS</label><br /><br />
+            {/* <img src={admin.img}></img> */}
             <div className="col-lg-4 pt-3" style={{ lineHeight: "20px" }}>
 
               <input type="text" placeholder='Enter your name' name="name" value={staff.name} onChange={handleChange}></input><br /><br />
@@ -239,7 +251,9 @@ const AdminPanel = () => {
               <input type="text" placeholder='ESI' name="esi" value={staff.esi} onChange={handleChange}></input>
             </div>
           </div>
-          <button className="p-2 butn mt-3 mb-3 fw-semibold text-white" onClick={submit}>Submit</button>
+          <div className='text-center'>
+          <button style={{width:450}} className="admin-butn p-2 butn mt-3 mb-3 fw-semibold text-white" onClick={submit}>Submit</button>
+          </div>
         </div>
       </div>
     </>

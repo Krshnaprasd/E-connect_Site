@@ -18,7 +18,7 @@ import EmployeeDetails from './Admin/EmployeeDetails.jsx'
 import AttendanceDetails from './Admin/AttendanceDetails.jsx';
 import SalaryDetails from './Admin/SalaryDetails.jsx';
 import VaccantDetails from './Admin/VaccantDetails.jsx';
-import Demo from './Demo.jsx';
+// import Demo from './Demo.jsx';
 
 
 function App() {
@@ -49,7 +49,7 @@ function App() {
         <Route path ='/admin/attend' element={<AttendanceDetails/>}/>
         <Route path ='/admin/ctc' element={<SalaryDetails/>}/>
         <Route path ='/admin/vacant' element={<VaccantDetails/>}/>
-        <Route path ='/demo' element={<Demo/>}/>
+      
       </Routes>
       </BrowserRouter>
      

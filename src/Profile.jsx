@@ -162,7 +162,7 @@ return(
     <>
     <div className="container-fluid mincard pt-5">
         <div className="container">
-        <div className='text-center fs-1 fw-bold pb-2 text-white-50'><p>MY PROFILE</p></div>
+        <div className='text-center fs-1 fw-bold text-white-50'><p>MY PROFILE</p></div>
             <div className="row row-cols-lg-4 row-cols-1 justify-content-around">
                 <div className="col-md-3 pb-5 col-sm-6 col-12">
                

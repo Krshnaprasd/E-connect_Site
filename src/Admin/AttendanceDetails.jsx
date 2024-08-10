@@ -1,8 +1,14 @@
-import{ useState } from 'react'
+import { useState } from 'react'
 import Swal from 'sweetalert2';
 
 const AttendanceDetails = () => {
-   
+
+  const [attendance] = [
+    {
+      img: "../src/assets/Attendance.jpg",
+    }
+  ]
+
   const [attend, setAttendData] = useState({
     workingdays: '',
     holidays: '',
@@ -11,18 +17,18 @@ const AttendanceDetails = () => {
     lop: '',
     month_salary: ''
   });
-  
+
   const handletabChange = (event) => {
     event.preventDefault();
     const { name, value } = event.target;
     setAttendData({ ...attend, [name]: value });
   };
-  
+
   const validateFields = () => {
     const requiredFields = [
       'workingdays', 'holidays', 'present', 'cl_sl', 'lop', 'month_salary'
     ];
-  
+
     for (let field of requiredFields) {
       if (!attend[field]) {
         Swal.fire({
@@ -36,10 +42,10 @@ const AttendanceDetails = () => {
     }
     return true;
   };
-  
+
   const sub = () => {
     const userId = localStorage.getItem("userId");
-  
+
     if (!userId) {
       Swal.fire({
         title: 'Error',
@@ -49,11 +55,11 @@ const AttendanceDetails = () => {
       });
       return;
     }
-  
+
     if (!validateFields()) {
       return;
     }
-  
+
     const attendData = {
       workingdays: attend.workingdays,
       holidays: attend.holidays,
@@ -62,7 +68,7 @@ const AttendanceDetails = () => {
       lop: attend.lop,
       month_salary: attend.month_salary,
     };
-  
+
     fetch(`http://localhost:6060/attend/set/${userId}`, {
       method: "post",
       headers: { 'Content-Type': 'application/json' },
@@ -76,7 +82,7 @@ const AttendanceDetails = () => {
           icon: 'success',
           confirmButtonText: 'Close'
         });
-  
+
         // Reset form fields after successful submission
         setAttendData({
           workingdays: '',
@@ -97,23 +103,26 @@ const AttendanceDetails = () => {
         });
       });
   };
-  
+
   return (
-    <div className='container-fluid'>
-      <div className="container pt-5 pb-5 text-center d-flex justify-content-center">
-        <div className="row card mincard" style={{ width:"350px"}}>
-          <div className="col  mt-5" style={{lineHeight:"20px"}}>
-            <label className="mb-5 fs-4 fw-bolder text-white">Attendance Details</label><br></br>
-            <input type="text" placeholder="No.of. Working Days" name="workingdays" value={attend.workingdays} onChange={handletabChange}></input><br></br><br></br>
-            <input type="text" placeholder="No.of. Present" name="holidays" value={attend.holidays} onChange={handletabChange}></input><br></br><br></br>
-            <input type="text" placeholder="No.of. Holidays" name="present" value={attend.present} onChange={handletabChange}></input><br></br><br></br>
-            <input type="text" placeholder="No.of. CL/SL" name="cl_sl" value={attend.cl_sl} onChange={handletabChange}></input><br></br><br></br>
-            <input type="text" placeholder="No.of. LOP's" name="lop" value={attend.lop} onChange={handletabChange}></input><br></br><br></br>
-            <input type="text" placeholder="Overall Salary" name="month_salary" value={attend.month_salary} onChange={handletabChange}></input>
+    <div className='container-fluid pt-5 pb-5'>
+      <div className="container">
+        <div className="row row-cols-lg-2 row-cols-1">
+          <div className="col">
+            <img className='img-fluid'  src={attendance.img} alt="" />
           </div>
-          <div className='text-center pt-3 pb-5'>
-            <button className='butn bg-primary text-white border-0 ps-5 pe-5 p-2' onClick={sub}>Submit</button>
+          <div className="col text-center pt-5" >
+            <label className="fw-bolder fs-2">Attendance Details</label><br></br><br></br>
+            <input style={{width:300}} type="text" placeholder="No.of. Working Days" name="workingdays" value={attend.workingdays} onChange={handletabChange}></input><br></br><br></br>
+            <input style={{width:300}} type="text" placeholder="No.of. Present" name="holidays" value={attend.holidays} onChange={handletabChange}></input><br></br><br></br>
+            <input style={{width:300}} type="text" placeholder="No.of. Holidays" name="present" value={attend.present} onChange={handletabChange}></input><br></br><br></br>
+            <input style={{width:300}} type="text" placeholder="No.of. CL/SL" name="cl_sl" value={attend.cl_sl} onChange={handletabChange}></input><br></br><br></br>
+            <input style={{width:300}} type="text" placeholder="No.of. LOP's" name="lop" value={attend.lop} onChange={handletabChange}></input><br></br><br></br>
+            <input style={{width:300}} type="text" placeholder="Overall Salary" name="month_salary" value={attend.month_salary} onChange={handletabChange}></input><br></br><br></br>
+            <button style={{width:300}} className='atnd-butn fw-bolder text-white border-0 p-1 ps-5 pe-5' onClick={sub}>Submit</button>
+
           </div>
+          
         </div>
       </div>
     </div>
