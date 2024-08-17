@@ -12,19 +12,19 @@ const handleTabClick = (tab) => {
       
 
 return(
-    <div class="project">
-    <div className="container-fluid mincard pt-3 pb-3">
-        <div class="row text-end text-white">
-            <span class="fs-1 fw-bold">EDEX TECH</span><span class="fs-4">learn until you get placed*</span>
+    <div class="">
+    <div className="container-fluid ftcard pt-3 pb-3">
+        <div class="row text-center text-white">
+            <span class="fs-1 fw-bold">E- TECH</span><span class="fs-4">learn until you get placed*</span>
         </div>
     </div>    
     <div class="container-fluid pt-5 pb-5">
     <div class="container">
         <div class="row algn">
             
-                    <span class="fs-4 fw-semibold pb-5">EdexTech Training Bootcamp</span>
+                    <span class="fs-4 fw-semibold pb-5">E-Tech Training Bootcamp</span>
                     <p class="txt pt-2  fs-6">
-                        EdexTech Training Bootcamp is the premier coaching center for unemployed students and also covered over 5 different cities across TamilNadu. Our coaching is one of the most sought-after institutes because of our exceptional services. 
+                        E-Tech Training Bootcamp is the premier coaching center for unemployed students and also covered over 5 different cities across TamilNadu. Our coaching is one of the most sought-after institutes because of our exceptional services. 
                         Classes are conducted by experienced teaching staff with high-level expertise in their backgrounds.Our institute extensively cover all the subjects and increase the knowledge and skill level of our students.
                     </p>
                     <p class="txt fs-6">
@@ -35,14 +35,14 @@ return(
                     <p class="txt  fs-6">
                         Our institutes are located in prime destinations in various cities like Chennai, Madurai, Coimbatore, Trichy, Salem. 
                         We are creating the next generation! What we coach, Is our foundation of mentee! We are excited to innovate the best methods of solving problems for every individual student so that will be easy to develop their knowledge and skill. 
-                        Here, at EdexTech Training Bootcamp, we provide our services with the sole intention of getting every single one of students placed in their recruited jobs.
+                        Here, at E-Tech Training Bootcamp, we provide our services with the sole intention of getting every single one of students placed in their recruited jobs.
                     </p>
         </div>
     </div>
 </div>
 <div class="container-fluid">
 <div class="container">
-        <p class="fs-4 pb-3 fw-semibold">Why EdexTech Training Bootcamp Needed?</p>
+        <p class="fs-4 pb-3 fw-semibold">Why E-Tech Training Bootcamp Needed?</p>
         <div class="d-flex justify-content-center"><p class="fs-4 fw-bold">"Unlock your Potential, Master the Code"</p></div>
     <div class="row row-cols-lg-3 row-cols-md-2 row-cols-1 pt-3">
         <div class="col pt-5">
@@ -429,20 +429,20 @@ return(
       </div>
     </div>
  </div> 
-  <div class="container-fluid ftcard text-white pt-5 pb-5">
+  <div class="container-fluid mincard text-white pt-5 pb-5">
   <div class="container">
     <div class="row row-cols-md-3 row-cols-xs-1 d-flex justify-content-evenly">
     <div class="endtag-1">
       <div class="letterfont d-flex fs-4 fw-bold p-2 d-flex justify-content-center pt-5">
-       EDEX TECH
+       E- TECH
       </div>
       <div class=" d-flex justify-content-center">Copyrights © 2020. All rights reserved.</div>
     </div>
   
   <div class="endtag-2 d-flex justify-content-center pt-3">
-    <ul class="list "><h4 class="fw-bold">EDEX TECH</h4>
+    <ul class="list "><h4 class="fw-bold">E- TECH</h4>
       <li>About</li>
-      <li>Edex in Media</li>
+      <li>E-Tech in Media</li>
       <li>Careers</li>
       <li>Edex Blog</li>
       <li>Success Stories</li>
@@ -456,10 +456,10 @@ return(
       <li>Privacy Policy</li>
       <br></br>
       <div ><h4 class="fw-bold">FOLLOW US</h4>
-        <a class="iconlist" href="https://twitter.com/i/flow/login?redirect_after_login=%2Fedextechit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+        <a class="iconlist" href="https://twitter.com/i/flow/login?redirect_after_log-Techit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
           <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
         </svg></a> &nbsp;&nbsp;
-        <a class="iconlist " href="https://www.facebook.com/people/Edextech-Io/pfbid02gAbLVaDgZidkgUgMmbJ3w1zfq7ZdUywxwkFcKSYA57EYSYJbc4qTywbkeWNL3CgUl/"><svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+        <a class="iconlist " href="https://www.facebook.com/p-Tech-Io/pfbid02gAbLVaDgZidkgUgMmbJ3w1zfq7ZdUywxwkFcKSYA57EYSYJbc4qTywbkeWNL3CgUl/"><svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
           <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
         </svg></a> &nbsp;&nbsp;
         <a class="iconlist " href="https://www.instagram.com/edextech_it/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">

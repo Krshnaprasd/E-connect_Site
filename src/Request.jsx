@@ -37,7 +37,7 @@ return(
     <>
     <div class="container-fluid project pt-5 pb-5">
     <div class="container">
-        <div class="d-flex justify-content-center pb-4"><span class="fs-1 fw-bold">MY REQUEST</span></div>
+        <div class="d-flex justify-content-center pb-4"><span class="r-txt fs-1 fw-bold">Requests</span></div>
         <div class="row pb-4 row-cols-lg-5 row-cols-md-2 row-cols-sm-2 row-cols-1 justify-content-around">
         <div class="card bar col mb-2 p-4">
             <div class="row justify-content-center text-white-50 pb-3"><svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-chat-square-text-fill" viewBox="0 0 16 16">

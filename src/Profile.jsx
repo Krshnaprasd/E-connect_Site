@@ -160,13 +160,12 @@ console.log(BankData);
 
 return(
     <>
-    <div className="container-fluid mincard pt-5">
-        <div className="container">
-        <div className='text-center fs-1 fw-bold text-white-50'><p>MY PROFILE</p></div>
+    <div className="container-fluid pfcard pt-5 pb-5">
+        <div className="container pt-5">
             <div className="row row-cols-lg-4 row-cols-1 justify-content-around">
                 <div className="col-md-3 pb-5 col-sm-6 col-12">
                
-                <Card>
+                <Card className='p-2'>
                         <Card.Img variant="top" src="https://cdn.dribbble.com/users/1138853/screenshots/4841628/28_34_gif.gif" />
                         <Card.Body>
                           <Card.Title className='text-center fw-bold'>Basic Details</Card.Title>
@@ -174,8 +173,8 @@ return(
                           Ensure that the platform you use is secure and legitimate to protect your sensitive information from unauthorized access or potential misuse.
                           </Card.Text>
                         </Card.Body>
-                        <Card.Footer className='text-center'>
-                        <button className='bg-primary border-0 pe-5 ps-5 p-1 text-white' onClick={handleShow} variant='primary'>Edit</button>
+                      
+                        <button className='bg-primary prcard border-0 pe-5 ps-5 p-1 text-white fw-bolder' onClick={handleShow} variant='primary'>Edit</button>
                                       <Modal show={show} onHide={handleShow} size='sm'>
                                   <Modal.Header>
                                   <Modal.Title className='fw-bold'>Basic Details</Modal.Title>
@@ -204,11 +203,11 @@ return(
                                   </Button>
                                   </Modal.Footer>
                               </Modal>
-                        </Card.Footer>
+                      
                       </Card>
                 </div>
                 <div className="col-md-3 pb-5 col-sm-6 col-12">
-                <Card>
+                <Card className='p-2'>
                         <Card.Img variant="top" src="https://i.pinimg.com/originals/19/97/f3/1997f3da28e8d29289097871f45b04fd.gif" />
                         <Card.Body>
                           <Card.Title className='text-center fw-bold'>Personal Details</Card.Title>
@@ -216,8 +215,8 @@ return(
                           Ensure that the platform you use is secure and legitimate to protect your sensitive information from unauthorized access or potential misuse.
                           </Card.Text>
                         </Card.Body>
-                        <Card.Footer className='text-center'>
-                        <button className='bg-primary border-0 pe-5 ps-5 p-1 text-white' onClick={handleShow1} variant="primary">Know more</button>
+                      
+                        <button className='bg-primary prcard border-0 pe-5 ps-5 p-1 text-white fw-bolder' onClick={handleShow1} variant="primary">Know more</button>
                                       <Modal show={show1} onHide={handleShow1} size='sm'>
                                   <Modal.Header>
                                   <Modal.Title className='fw-bold'>Personal Details</Modal.Title>
@@ -247,11 +246,11 @@ return(
                                   </Button>
                                   </Modal.Footer>
                               </Modal>                        
-                        </Card.Footer>
+                       
                       </Card>
                 </div>
                 <div className="col-md-3 pb-5 col-sm-6 col-12">
-                <Card>
+                <Card className='p-2'>
                         <Card.Img variant="top" src="https://cdn.dribbble.com/users/20368/screenshots/3953268/api_anim.gif" />
                         <Card.Body>
                           <Card.Title className='text-center fw-bold'>Bank Details</Card.Title>
@@ -259,8 +258,8 @@ return(
                           Ensure that the platform you use is secure and legitimate to protect your sensitive information from unauthorized access or potential misuse.
                           </Card.Text>
                         </Card.Body>
-                        <Card.Footer className='text-center'>
-                        <button className='bg-primary border-0 pe-5 ps-5 p-1 text-white' onClick={handleShow2} variant="primary">Know more</button>
+                     
+                        <button className='bg-primary prcard border-0 pe-5 ps-5 p-1 fw-bolder text-white' onClick={handleShow2} variant="primary">Know more</button>
                                       <Modal show={show2} onHide={handleShow2} size='sm'>
                                   <Modal.Header>
                                   <Modal.Title className='fw-bold'>Bank Details</Modal.Title>
@@ -289,7 +288,7 @@ return(
                                       Close
                                   </Button>
                                   </Modal.Footer>
-                              </Modal>                        </Card.Footer>
+                              </Modal>                      
                       </Card>
                 </div>
             </div>
