@@ -15,13 +15,13 @@ const Landpage = () => {
 
   const [checkIn, setCheckindate] = useState(null);
   const [checkOut, setCheckoutdate] = useState(null);
-  const userId = localStorage.getItem("userId");
+  const userId = localStorage.getItem("id");
 
   const checkIndate = () => {
     var showdate = new Date();
     var checkInTime = showdate.getHours() + ':' + showdate.getMinutes() + ':' + showdate.getSeconds();
     setCheckindate(checkInTime);
-
+  
     fetch(`http://localhost:6060/punch/checkin/${userId}`, {
       method: 'POST',
       headers: {
@@ -29,17 +29,34 @@ const Landpage = () => {
       },
       body: JSON.stringify({ checkIn: checkInTime }),
     })
-      .then(response => response.json())
+      .then(response => {
+        if (response.status === 400) {
+          // If the response is a 400 Bad Request, it means the user has already checked in.
+          Swal.fire({
+            icon: 'warning',
+            title: 'Already Checked In',
+            text: 'You have already checked in today. You cannot check in again.',
+          });
+          return null; // Stop further processing
+        } else if (!response.ok) {
+          // If there is any other error, throw an error to be caught by the catch block
+          throw new Error('Check-in failed');
+        }
+        return response.json(); // If successful, process the response
+      })
       .then(data => {
-
-        console.log('Check-in successful:', data);
-        Swal.fire({
-          icon: 'success',
-          title: 'Check-in successful',
-          text: 'You have successfully checked in.',
-        });
+        if (data) {
+          // Show success alert only if check-in is successful
+          console.log('Check-in successful:', data);
+          Swal.fire({
+            icon: 'success',
+            title: 'Check-in successful',
+            text: 'You have successfully checked in.',
+          });
+        }
       })
       .catch((error) => {
+        // Handle any other errors
         Swal.fire({
           icon: 'error',
           title: 'Check-in failed',
@@ -48,37 +65,65 @@ const Landpage = () => {
         console.error('Error:', error);
       });
   };
+  
 
-  const checkOutdate = () => {
-    var showdate = new Date();
-    var checkOutTime = showdate.getHours() + ':' + showdate.getMinutes() + ':' + showdate.getSeconds();
-    setCheckoutdate(checkOutTime);
+ const checkOutdate = () => {
+  var showdate = new Date();
+  var checkOutTime = showdate.getHours() + ':' + showdate.getMinutes() + ':' + showdate.getSeconds();
+  setCheckoutdate(checkOutTime);
 
-    fetch(`http://localhost:6060/punch/checkout/${userId}`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ checkOut: checkOutTime }),
+  fetch(`http://localhost:6060/punch/checkout/${userId}`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ checkOut: checkOutTime }),
+  })
+    .then(response => {
+      if (response.status === 404) {
+        // Handle the case where the check-in record is not found
+        Swal.fire({
+          icon: 'error',
+          title: 'Check-out Error',
+          text: 'No check-in record found for check-out. Please check in first.',
+        });
+        return null; // Stop further processing
+      } else if (response.status === 400) {
+        // Handle the case where the user has already checked out
+        Swal.fire({
+          icon: 'warning',
+          title: 'Already Checked Out',
+          text: 'You have already checked out today. You cannot check out again.',
+        });
+        return null;
+      } else if (!response.ok) {
+        // Handle any other errors
+        throw new Error('Check-out failed');
+      }
+      return response.json(); // If successful, process the response
     })
-      .then(response => response.json())
-      .then(data => {
+    .then(data => {
+      if (data) {
+        // Show success alert if check-out is successful
         Swal.fire({
           icon: 'success',
           title: 'Check-out successful',
           text: 'You have successfully checked out.',
         });
         console.log('Check-out successful:', data);
-      })
-      .catch((error) => {
-        Swal.fire({
-          icon: 'error',
-          title: 'Check-out failed',
-          text: 'There was an error checking out. Please try again.',
-        });
-        console.error('Error:', error);
+      }
+    })
+    .catch((error) => {
+      // Handle any other errors
+      Swal.fire({
+        icon: 'error',
+        title: 'Check-out failed',
+        text: 'There was an error checking out. Please try again.',
       });
-  };
+      console.error('Error:', error);
+    });
+};
+
 
   useEffect(() => {
     const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";

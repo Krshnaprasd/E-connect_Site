@@ -174,7 +174,7 @@ return(
                           </Card.Text>
                         </Card.Body>
                       
-                        <button className='bg-primary prcard border-0 pe-5 ps-5 p-1 text-white fw-bolder' onClick={handleShow} variant='primary'>Edit</button>
+                        <button className='bg-primary prcard border-0 pe-5 ps-5 p-1 text-white fw-bolder' onClick={handleShow}  >Edit</button>
                                       <Modal show={show} onHide={handleShow} size='sm'>
                                   <Modal.Header>
                                   <Modal.Title className='fw-bold'>Basic Details</Modal.Title>
@@ -216,7 +216,7 @@ return(
                           </Card.Text>
                         </Card.Body>
                       
-                        <button className='bg-primary prcard border-0 pe-5 ps-5 p-1 text-white fw-bolder' onClick={handleShow1} variant="primary">Know more</button>
+                        <button className='bg-primary prcard border-0 pe-5 ps-5 p-1 text-white fw-bolder' onClick={handleShow1} >Know more</button>
                                       <Modal show={show1} onHide={handleShow1} size='sm'>
                                   <Modal.Header>
                                   <Modal.Title className='fw-bold'>Personal Details</Modal.Title>
@@ -259,7 +259,7 @@ return(
                           </Card.Text>
                         </Card.Body>
                      
-                        <button className='bg-primary prcard border-0 pe-5 ps-5 p-1 fw-bolder text-white' onClick={handleShow2} variant="primary">Know more</button>
+                        <button className='bg-primary prcard border-0 pe-5 ps-5 p-1 fw-bolder text-white' onClick={handleShow2} >Know more</button>
                                       <Modal show={show2} onHide={handleShow2} size='sm'>
                                   <Modal.Header>
                                   <Modal.Title className='fw-bold'>Bank Details</Modal.Title>
