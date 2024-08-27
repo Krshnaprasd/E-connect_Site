@@ -6,6 +6,8 @@ import mark from './assets/markattend.jpg';
 import job from './assets/job.jpg'
 
 const HR = () =>{
+    
+    const userId = localStorage.getItem("id");
     const [show, setShow] = useState(false);
     const [show1, setShow1] = useState(false);
     const [show2, setShow2] = useState(false);
@@ -29,23 +31,27 @@ const HR = () =>{
   }
 //   let id = localStorage.getItem("id")
 
-  const[attend, setAttendData] = useState([])
+const [salaryData, setSalaryData] = useState([]);
 
-
-
-  useEffect(() => {
-    fetch("http://localhost:6060/attend/get", {
-
+useEffect(() => {
+    // API call to fetch the salary for a specific user
+    fetch(`http://localhost:6060/salary/get/${userId}`)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Failed to fetch salary data');
+        }
+        return response.json();
       })
-      .then(response => response.json())
       .then(data => {
-
-        // console.log("================================= attend data =====" + data);
-        setAttendData(data)
-
+        setSalaryData(data);
+       
       })
+      .catch(error => {
+       console.log(error);
+       
+      });
+  }, [userId]);
 
-  }, [])
 return(
     <div className='hr'>
     <div className="container-fluid pt-5 pb-5">
@@ -61,29 +67,36 @@ return(
                 <button className='hr-butn border-0 mt-4 fw-bolder p-1 fs-5 text-white bg-none' onClick={handleShow}>
                     Salary
                 </button>
-                
+               
                 <Modal show={show} onHide={handleShow} size='sm' >
-                    
+                
                     <Modal.Header>
                     <Modal.Title className='fw-bold'>Salary Slip</Modal.Title>
                     </Modal.Header>
                     
-                    <Modal.Body>
-                           
-                             <label>Basic Salary:{attend.basic_salary}<span></span></label><br></br>
-                            <label>Travel Allowance:{attend.ta}<span></span></label><br></br>
-                            <label>Food Allowance:{attend.fa}<span></span></label><br></br>
-                            <label>PF:{attend.pf}<span></span></label><br></br>
-                            <label>ESI:{attend.esi}<span></span></label><br></br><hr></hr>
-                            <label>Overall Salary:{attend.overall_salary}<span></span></label> 
+                    <Modal.Body >
+                    {salaryData ? (
+                           <>
+                             <label>Basic Salary:{salary.basic_salary}<span></span></label><br></br>
+                            <label>Travel Allowance:{salary.ta}<span></span></label><br></br>
+                            <label>Food Allowance:{salary.fa}<span></span></label><br></br>
+                            <label>PF:{salary.pf}<span></span></label><br></br>
+                            <label>ESI:{salary.esi}<span></span></label><br></br><hr></hr>
+                            <label>Overall Salary:{salary.overall_salary}<span></span></label> 
+                            </>
+                             ) : (
+                     <p>Loading salary data...</p>
+                    )}
                     </Modal.Body>
+                   
                     <Modal.Footer>
                     <Button className='bg-primary p-2 rounded-2 border-0 text-white' onClick={handleClose}>
                         Close
                     </Button>
                     </Modal.Footer>
+                      
                 </Modal>
-               
+              
             </div>
             <div className="card hr-card  col p-4" style={{width:280, height:400}}>
                 <img src={mark} className='img-fluid'></img><br></br>
@@ -99,11 +112,11 @@ return(
                     </Modal.Header>
                     <Modal.Body>
                       
-                            <label>No.of Working days:{attend.workingdays}<span></span></label><br></br>
+                            {/* <label>No.of Working days:{attend.workingdays}<span></span></label><br></br>
                             <label>No.of Holidays:{attend.holidays}<span></span></label><br></br>
                             <label>No.of Present:{attend.present}<span></span></label><br></br>
                             <label>No.of CL/SL:{attend.cl_sl}<span></span></label><br></br>
-                            <label>No.of LOPs:{attend.lop}<span></span></label><br></br>
+                            <label>No.of LOPs:{attend.lop}<span></span></label><br></br> */}
                     </Modal.Body>
                     <Modal.Footer>
                     <Button className='bg-primary p-2 rounded-2 border-0 text-white' onClick={handleClose1}>

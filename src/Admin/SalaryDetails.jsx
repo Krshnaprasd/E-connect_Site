@@ -48,7 +48,7 @@ const SalaryDetails = () =>{
   };
   
   const sub = () => {
-    const userId = localStorage.getItem("userId");
+    const userId = localStorage.getItem("id");
   
     if (!userId) {
       Swal.fire({
