@@ -12,7 +12,7 @@ const SalaryDetails = () =>{
   ]
 
   const [ctc, setCtcData] = useState({
-    ctc: '',
+  
     basic_salary: '',
     ta: '',
     fa: '',
@@ -30,7 +30,7 @@ const SalaryDetails = () =>{
   
   const validateFields = () => {
     const requiredFields = [
-      'ctc', 'basic_salary', 'ta', 'fa', 'pf', 'esi', 'overall_salary'
+     'basic_salary', 'ta', 'fa', 'pf', 'esi', 'overall_salary'
     ];
   
     for (let field of requiredFields) {
@@ -65,7 +65,7 @@ const SalaryDetails = () =>{
     }
   
     const ctcData = {
-      ctc: ctc.ctc,
+    
       basic_salary: ctc.basic_salary,
       ta: ctc.ta,
       fa: ctc.fa,
@@ -93,7 +93,7 @@ const SalaryDetails = () =>{
   
         // Reset form fields after successful submission
         setCtcData({
-          ctc: '',
+        
           basic_salary: '',
           ta: '',
           fa: '',
@@ -121,9 +121,8 @@ const SalaryDetails = () =>{
       <div className="container-fluid">
         <div className="container">
           <div className="row">
-            <div className="col-md-6 pt-5 mt-2 text-center">
+            <div className="col-md-6 pt-5 mt-md-5 text-center">
               <label className="fs-2 fw-bolder">Salary Details</label><br /><br />
-              <input style={{width:300}} type="text" placeholder="Annual Gross Salary" name="ctc" value={ctc.ctc} onChange={handletabChange}></input><br /><br />
               <input style={{width:300}} type="text" placeholder="Basic Salary" name="basic_salary" value={ctc.basic_salary} onChange={handletabChange}></input><br /><br />
               <input style={{width:300}} type="text" placeholder="Travel Allowance" name="ta" value={ctc.ta} onChange={handletabChange}></input><br /><br />
               <input style={{width:300}} type="text" placeholder="Food Allowance" name="fa" value={ctc.fa} onChange={handletabChange}></input><br /><br />
