@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Nav from 'react-bootstrap/Nav';
 import Swal from 'sweetalert2';
-
+import { Carousel } from 'react-bootstrap';
 
 const AdminPanel = () => {
 
@@ -10,13 +10,11 @@ const AdminPanel = () => {
 
  
 
-  const style = {
-    backgroundImage: 'url(../src/assets/Admin.jpg)',
-    backgroundSize: 'cover',  
-    backgroundPosition: 'center', 
-    backgroundRepeat: 'no-repeat', 
-    width: '100%',    
-  };
+  const [admin] = [
+    {
+      img: "../src/assets/About.avif",
+    }
+  ]
 
   const [staff, setStaffData] = useState({
     name: '',
@@ -221,11 +219,11 @@ const AdminPanel = () => {
           </Nav>
         </div>
       </div>
-      <div className="container-fluid pt-3 img-fluid" style={style}>
+      <div className="container-fluid pt-3" >
         <div className="container">
-          <div className="row text-center pt-3 "  >
+          {/* <div className="row text-center pt-3 "  >
             <label className="fs-4 fw-bolder">ADD USERS</label><br /><br />
-            {/* <img src={admin.img}></img> */}
+          
             <div className="col-lg-4 pt-3" style={{ lineHeight: "20px" }}>
 
               <input type="text" placeholder='Enter your name' name="name" value={staff.name} onChange={handleChange}></input><br /><br />
@@ -252,8 +250,65 @@ const AdminPanel = () => {
             </div>
           </div>
           <div className='text-center'>
-          <button style={{width:450}} className="admin-butn p-2 butn mt-3 mb-3 fw-semibold text-white" onClick={submit}>Submit</button>
+          <button style={{width:250}} className="admin-butn p-2 butn mt-3 mb-3 fw-semibold text-white" onClick={submit}>Submit</button>
+          </div> */}
+          <div className="row d-flex justify-content-around">
+            <div className="col-md-5 d-lg-block d-none align-content-center">
+            <img className='img-fluid'  src={admin.img} alt="" />
+            </div>
+            <div className="col-md-5">
+            <Carousel interval={null}>
+            {/* User Details Slide */}
+            <Carousel.Item>
+                <div className="row text-center pt-5 pb-3">
+                    <label className="fs-4 fw-bolder">BASIC DETAILS</label><br></br>
+                    <div className="col-lg-12 pt-3" style={{ lineHeight: "20px" }}>
+                        <input type="text" placeholder='Enter your name' name="name" value={staff.name} onChange={handleChange} /><br /><br />
+                        <input type="text" placeholder='Enter your email' name="email" value={staff.email} onChange={handleChange} /><br /><br />
+                        <input type="text" placeholder='Enter your mobile' name="phoneno" value={staff.phoneno} onChange={handleChange} /><br /><br />
+                        <input type="text" placeholder='Designation' name="designation" value={staff.designation} onChange={handleChange} /><br /><br />
+                        <input type="password" placeholder='Set Password' name="password" value={staff.password} onChange={handleChange} /><br /><br />
+                        <input type="password" placeholder='Confirm Password' name="confirmpassword" value={staff.confirmpassword} onChange={handleChange} /><br /><br />
+                    </div>
+                </div>
+            </Carousel.Item>
+
+            {/* Address Details Slide */}
+            <Carousel.Item>
+                <div className="row text-center pt-5 pb-3">
+                    <label className="fs-4 fw-bolder">ADDRESS DETAILS</label>
+                    <div className="col-lg-12 pt-3" style={{ lineHeight: "20px" }}>
+                        <input type="text" placeholder='Enter your address' name="address" value={staff.address} onChange={handleChange} /><br /><br />
+                        <input type="text" placeholder='Enter your location' name="location" value={staff.location} onChange={handleChange} /><br /><br />
+                        <input type="text" placeholder='Enter your city' name="city" value={staff.city} onChange={handleChange} /><br /><br />
+                        <input type="text" placeholder='Enter your state' name="state" value={staff.state} onChange={handleChange} /><br /><br />
+                        <input type="text" placeholder='Enter your pincode' name="pincode" value={staff.pincode} onChange={handleChange} /><br /><br />
+                    </div>
+                </div>
+            </Carousel.Item>
+
+            {/* Bank Details Slide */}
+            <Carousel.Item>
+                <div className="row text-center pt-3 pb-3">
+                    <label className="fs-4 fw-bolder">BANK DETAILS</label>
+                    <div className="col-lg-12 pt-3" style={{ lineHeight: "20px" }}>
+                        <input type="text" placeholder='Enter your Bank' name="bank" value={staff.bank} onChange={handleChange} /><br /><br />
+                        <input type="text" placeholder='Enter your AccountNo' name="accountno" value={staff.accountno} onChange={handleChange} /><br /><br />
+                        <input type="text" placeholder='Enter your IFSC code' name="ifsccode" value={staff.ifsccode} onChange={handleChange} /><br /><br />
+                        <input type="text" placeholder='Enter your branch' name="branch" value={staff.branch} onChange={handleChange} /><br /><br />
+                        <input type="text" placeholder='PF' name="pf" value={staff.pf} onChange={handleChange} /><br /><br />
+                        <input type="text" placeholder='ESI' name="esi" value={staff.esi} onChange={handleChange} />
+                        <div className='text-center'>
+                        <button style={{ width: 250 }} className="admin-butn p-2 butn mt-3 mb-3 fw-semibold text-white" onClick={submit}>Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </Carousel.Item>
+        </Carousel>
+            </div>
           </div>
+          
+           
         </div>
       </div>
     </>

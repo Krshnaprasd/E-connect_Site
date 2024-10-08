@@ -15,7 +15,7 @@ const AttendanceDetails = () => {
     present: '',
     cl_sl: '',
     lop: '',
-    month_salary: ''
+    
   });
 
   const handletabChange = (event) => {
@@ -26,7 +26,7 @@ const AttendanceDetails = () => {
 
   const validateFields = () => {
     const requiredFields = [
-      'workingdays', 'holidays', 'present', 'cl_sl', 'lop', 'month_salary'
+      'workingdays', 'holidays', 'present', 'cl_sl', 'lop', 
     ];
 
     for (let field of requiredFields) {
@@ -66,7 +66,7 @@ const AttendanceDetails = () => {
       present: attend.present,
       cl_sl: attend.cl_sl,
       lop: attend.lop,
-      month_salary: attend.month_salary,
+      
     };
 
     fetch(`http://localhost:6060/attend/set/${userId}`, {
@@ -90,7 +90,7 @@ const AttendanceDetails = () => {
           present: '',
           cl_sl: '',
           lop: '',
-          month_salary: ''
+          
         });
       })
       .catch((error) => {
@@ -111,14 +111,13 @@ const AttendanceDetails = () => {
           <div className="col">
             <img className='img-fluid'  src={attendance.img} alt="" />
           </div>
-          <div className="col text-center pt-5" >
+          <div className="col text-center pt-5 mt-md-5" >
             <label className="fw-bolder fs-2">Attendance Details</label><br></br><br></br>
             <input style={{width:300}} type="text" placeholder="No.of. Working Days" name="workingdays" value={attend.workingdays} onChange={handletabChange}></input><br></br><br></br>
             <input style={{width:300}} type="text" placeholder="No.of. Present" name="holidays" value={attend.holidays} onChange={handletabChange}></input><br></br><br></br>
             <input style={{width:300}} type="text" placeholder="No.of. Holidays" name="present" value={attend.present} onChange={handletabChange}></input><br></br><br></br>
             <input style={{width:300}} type="text" placeholder="No.of. CL/SL" name="cl_sl" value={attend.cl_sl} onChange={handletabChange}></input><br></br><br></br>
             <input style={{width:300}} type="text" placeholder="No.of. LOP's" name="lop" value={attend.lop} onChange={handletabChange}></input><br></br><br></br>
-            <input style={{width:300}} type="text" placeholder="Overall Salary" name="month_salary" value={attend.month_salary} onChange={handletabChange}></input><br></br><br></br>
             <button style={{width:300}} className='atnd-butn fw-bolder text-white border-0 p-1 ps-5 pe-5' onClick={sub}>Submit</button>
 
           </div>

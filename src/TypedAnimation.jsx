@@ -10,10 +10,8 @@ const TypeAnimation = () => {
       typeSpeed: 100,
       backSpeed: 100,
       backDelay: 2000,
-      loop: true,
-      
+      loop: true,      
     };
-
     const typed = new Typed(typedElement.current, options);
 
     return () => {
