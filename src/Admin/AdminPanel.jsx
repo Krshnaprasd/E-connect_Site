@@ -289,7 +289,7 @@ const AdminPanel = () => {
 
             {/* Bank Details Slide */}
             <Carousel.Item>
-                <div className="row text-center pt-3 pb-3">
+                <div className="row text-center pt-md-5 pt-3 pb-3">
                     <label className="fs-4 fw-bolder">BANK DETAILS</label>
                     <div className="col-lg-12 pt-3" style={{ lineHeight: "20px" }}>
                         <input type="text" placeholder='Enter your Bank' name="bank" value={staff.bank} onChange={handleChange} /><br /><br />

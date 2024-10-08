@@ -105,7 +105,7 @@ const AttendanceDetails = () => {
   };
 
   return (
-    <div className='container-fluid pt-5 pb-5'>
+    <div className='container-fluid pt-3 pb-5'>
       <div className="container">
         <div className="row row-cols-lg-2 row-cols-1">
           <div className="col">

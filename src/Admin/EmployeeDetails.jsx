@@ -186,7 +186,7 @@ const EmployeeDetails = () => {
     }, []);
 
     const [show, setShow] = useState(false);
-    const [currentEmployee, setCurrentEmployee] = useState(null); // Track the current employee for editing
+    const [currentEmployee, setCurrentEmployee] = useState(null); 
 
     const handleClose = () => setShow(false);
     const handleShow = (employee) => {
@@ -199,13 +199,13 @@ const EmployeeDetails = () => {
             phoneno: employee.phoneno,
             password: employee.password,
             confirmpassword: employee.confirmpassword,
-            address: employee.address.length > 0 ? employee.address[0].address : '', // Get the first address object if available
+            address: employee.address.length > 0 ? employee.address[0].address : '', 
             city: employee.address.length > 0 ? employee.address[0].city : '',
             state: employee.address.length > 0 ? employee.address[0].state : '',
             location: employee.address.length > 0 ? employee.address[0].location : '',
             pincode: employee.address.length > 0 ? employee.address[0].pincode : '',
             // Extracting values from bank array
-            bank: employee.bank.length > 0 ? employee.bank[0].bank : '', // Get the first bank object if available
+            bank: employee.bank.length > 0 ? employee.bank[0].bank : '', 
             accountno: employee.bank.length > 0 ? employee.bank[0].accountno : '',
             ifsccode: employee.bank.length > 0 ? employee.bank[0].ifsccode : '',
             pf: employee.bank.length > 0 ? employee.bank[0].pf : '',
