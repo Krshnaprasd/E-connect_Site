@@ -153,6 +153,7 @@ const Landpage = () => {
               <Nav.Link href="#about">About</Nav.Link>
               <Nav.Link href="#profile">Profile</Nav.Link>
               <Nav.Link href="#hr">HR</Nav.Link>
+              <Nav.Link href="#career">Careers</Nav.Link>
               <Nav.Link href="#request">Requests</Nav.Link>
               <Nav.Link href="#punch">Punchlist</Nav.Link>
             </Nav>
@@ -178,7 +179,7 @@ const Landpage = () => {
                 <path fillRule='evenodd' d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z" />
                 <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466" />
               </svg></Nav.Link>
-              <Nav.Link classNameName="" href="not"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" className="bi bi-bell-fill" viewBox="0 0 16 16">
+              <Nav.Link className="" href="not"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" className="bi bi-bell-fill" viewBox="0 0 16 16">
                 <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901" />
               </svg></Nav.Link>
 

@@ -106,13 +106,24 @@
     -webkit-background-clip: text;
     color: transparent;
 }
-
+.p-link{
+    color:  rgba(255, 87, 51, 1);
+}
 .h-txt {
     background-image: linear-gradient(83.2deg, rgba(150, 93, 233, 1) 10.8%, rgba(99, 88, 238, 1) 94.3%);
     -webkit-background-clip: text;
     color: transparent;
 }
-
+.h-link{
+    color: rgba(150, 93, 233, 1);
+}
+.c-txt{
+    -webkit-background-clip: text;
+   
+}
+.c-link{
+    color: gray;
+}
 .r-txt {
     -webkit-background-clip: text;
     color: transparent;
@@ -169,4 +180,42 @@
     /* background-image: linear-gradient( 135deg, #CE9FFC 10%, #7367F0 100%);
      */
     background-image: linear-gradient(135deg, rgb(250, 178, 255) 10%, rgb(25, 4, 229) 100%);
+}
+.custom-datepicker{
+    width: 300px !important;
+}
+.mainhd{
+    font-size:2.7em;
+
+}
+.txt{
+    background-image: linear-gradient( 93.2deg,  rgba(24,95,246,1) 14.4%, rgba(27,69,166,1) 90.8% );
+    -webkit-background-clip:text;
+    color: transparent;
+}
+.search{
+    background-image: linear-gradient( 93.2deg,  rgba(24,95,246,1) 14.4%, rgba(27,69,166,1) 90.8% );
+}
+.tex{
+    font-size:0.9em;
+    color: rgba(128, 128, 128, 0.756);
+}
+
+@media screen and  (max-width:767px){
+    .mainhd{
+       font-size: 1.2em;
+    }
+    .tex{
+        font-size: 0.6em;
+    }
+    }
+.apply-btn{
+    background-color: rgba(24,95,246,1);
+    color: white;
+    border: 0;
+    width: 80px;
+    font-size: 12px;
+    border-radius: 3px;
+    padding: 2.5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }

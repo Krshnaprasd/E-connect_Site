@@ -7,6 +7,7 @@ import Login from '../src/Login'
 import LandPage from '../src/LandPage.jsx'
 import Elearn from '../src/Elearn.jsx'
 import Profile from '../src/Profile.jsx'
+import Career from '../src/Career.jsx'
 import HR from '../src/HR.jsx'
 import Punchlist from '../src/Punchlist.jsx'
 import Request from '../src/Request.jsx'
@@ -40,6 +41,7 @@ function App() {
         <Route path ='/land' element ={<LandPage/>}/>
         <Route path ='/elearn' element ={<Elearn/>}/>
         <Route path ='/prof' element ={<Profile/>}/>
+        <Route path ='/job/:jobid' element = {<Career/>}/>
         <Route path ='/req' element ={<Request/>}/>
         <Route path ='/hr' element ={<HR/>}/>
         <Route path ='/punch' element ={<Punchlist/>}/>

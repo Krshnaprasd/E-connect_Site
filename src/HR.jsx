@@ -154,7 +154,7 @@ const HR = () => {
                             </Modal>
 
                         </div>
-                        <div className="card hr-card col p-5" style={{ width: 280, height: 400 }}>
+                        {/* <div className="card hr-card col p-5" style={{ width: 280, height: 400 }}>
                             <img src={job} className='img-fluid'></img><br></br><br></br>
                             <button className='hr-butn border-0 bg-none text-white mt-5 fw-bolder p-1 fs-5' onClick={handleShow2}>
                                 Job Openings
@@ -180,14 +180,14 @@ const HR = () => {
                                         <Modal.Header>
                                             <Modal.Title className='fw-bold'>Application Form</Modal.Title>
                                         </Modal.Header>
-                                        <div className='d-grid justify-content-center'>
-                                            <Modal.Body className='d-grid justify-center' style={{ width: '18em' }}>
-                                                <label>Username:</label>
-                                                <input type="text"></input>
-                                                <label>Email:</label>
-                                                <input type="text"></input>
+                                        <div className=''>
+                                            <Modal.Body className='' >
+                                                <label>Username:</label><br></br>
+                                                <input style={{width:265}} type="text"></input><br></br>
+                                                <label>Email:</label><br></br>
+                                                <input  style={{width:265}} type="text"></input><br></br>
                                                 <label>Select:</label>
-                                                <Form.Select aria-label="Default select example">
+                                                <Form.Select  style={{width:265}} aria-label="Default select example">
                                                     <option>options</option>
                                                     <option value="1">Manager</option>
                                                     <option value="2">Team Lead</option>
@@ -197,7 +197,8 @@ const HR = () => {
                                                     <option value="6">BackEnd Developer</option>
                                                     <option value="7">Training Tutors</option>
                                                 </Form.Select><br></br>
-                                                <textarea placeholder='Message'></textarea>
+                                                <input  style={{width:265}} type='file'></input><br></br><br></br>
+                                                <textarea  style={{width:265}} placeholder='Message'></textarea>
                                             </Modal.Body></div>
                                         <Modal.Footer>
                                             <Button className='bg-primary p-2 rounded-2 border-0 text-white' onClick={sub}>
@@ -213,7 +214,7 @@ const HR = () => {
                                     </Button>
                                 </Modal.Footer>
                             </Modal>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
