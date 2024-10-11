@@ -18,7 +18,9 @@ import AdminPanel from './Admin/AdminPanel.jsx';
 import EmployeeDetails from './Admin/EmployeeDetails.jsx'
 import AttendanceDetails from './Admin/AttendanceDetails.jsx';
 import SalaryDetails from './Admin/SalaryDetails.jsx';
-import VaccantDetails from './Admin/VaccantDetails.jsx';
+
+import JobPost from './Career/Jobpost.jsx'
+import Applied from './Career/Applied.jsx';
 // import Demo from './Demo.jsx';
 
 
@@ -50,7 +52,9 @@ function App() {
         <Route path ='/admin/employ' element={<EmployeeDetails/>}/>
         <Route path ='/admin/attend' element={<AttendanceDetails/>}/>
         <Route path ='/admin/ctc' element={<SalaryDetails/>}/>
-        <Route path ='/admin/vacant' element={<VaccantDetails/>}/>
+     
+        <Route path ='/career' element={<JobPost/>}/>
+        <Route path ='/career/apply' element={<Applied/>}/>
       
       </Routes>
       </BrowserRouter>

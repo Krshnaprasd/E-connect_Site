@@ -10,25 +10,20 @@ const HR = () => {
     const userId = localStorage.getItem("id");
     const [show, setShow] = useState(false);
     const [show1, setShow1] = useState(false);
-    const [show2, setShow2] = useState(false);
-    const [show3, setShow3] = useState(false);
+   
+    
 
 
     const handleClose = () => setShow(false);
     const handleClose1 = () => setShow1(false);
-    const handleClose2 = () => setShow2(false);
-    const handleClose3 = () => setShow3(false);
+
 
 
     const handleShow = () => setShow(true);
     const handleShow1 = () => setShow1(true);
-    const handleShow2 = () => setShow2(true);
-    const handleShow3 = () => setShow3(true);
 
-
-    const sub = () => {
-        alert("Application sent")
-    }
+  
+   
     //   let id = localStorage.getItem("id")
 
     const [salaryData, setSalaryData] = useState([]);
@@ -154,67 +149,7 @@ const HR = () => {
                             </Modal>
 
                         </div>
-                        {/* <div className="card hr-card col p-5" style={{ width: 280, height: 400 }}>
-                            <img src={job} className='img-fluid'></img><br></br><br></br>
-                            <button className='hr-butn border-0 bg-none text-white mt-5 fw-bolder p-1 fs-5' onClick={handleShow2}>
-                                Job Openings
-                            </button>
-                            <Modal show={show2} onHide={handleShow2} size='sm'>
-                                <Modal.Header>
-                                    <Modal.Title className='fw-bold'>Internal Job Openings</Modal.Title>
-                                </Modal.Header>
-                                <Modal.Body>
-                                    <label>Manager: <span></span></label><br></br>
-                                    <label>Team Lead: <span></span></label><br></br>
-                                    <label>Senior Developer: <span></span></label><br></br>
-                                    <label>Junior Developer: <span></span></label> <br></br>
-                                    <label>FrontEnd Developer: <span></span></label><br></br>
-                                    <label>BackEnd Developer: <span></span></label><br></br>
-                                    <label>Training Tutors: <span></span></label><br></br>
-                                </Modal.Body>
-                                <Modal.Footer>
-                                    <Button className='bg-primary p-2 rounded-2 border-0 text-white' onClick={handleShow3}>
-                                        Apply
-                                    </Button>
-                                    <Modal show={show3} onHide={handleShow3} size='sm'>
-                                        <Modal.Header>
-                                            <Modal.Title className='fw-bold'>Application Form</Modal.Title>
-                                        </Modal.Header>
-                                        <div className=''>
-                                            <Modal.Body className='' >
-                                                <label>Username:</label><br></br>
-                                                <input style={{width:265}} type="text"></input><br></br>
-                                                <label>Email:</label><br></br>
-                                                <input  style={{width:265}} type="text"></input><br></br>
-                                                <label>Select:</label>
-                                                <Form.Select  style={{width:265}} aria-label="Default select example">
-                                                    <option>options</option>
-                                                    <option value="1">Manager</option>
-                                                    <option value="2">Team Lead</option>
-                                                    <option value="3">Senior Developer</option>
-                                                    <option value="4">Junior Developer</option>
-                                                    <option value="5">FrontEnd Developer</option>
-                                                    <option value="6">BackEnd Developer</option>
-                                                    <option value="7">Training Tutors</option>
-                                                </Form.Select><br></br>
-                                                <input  style={{width:265}} type='file'></input><br></br><br></br>
-                                                <textarea  style={{width:265}} placeholder='Message'></textarea>
-                                            </Modal.Body></div>
-                                        <Modal.Footer>
-                                            <Button className='bg-primary p-2 rounded-2 border-0 text-white' onClick={sub}>
-                                                Submit
-                                            </Button>
-                                            <Button className='bg-primary p-2 rounded-2 border-0 text-white' onClick={handleClose3}>
-                                                Close
-                                            </Button>
-                                        </Modal.Footer>
-                                    </Modal>
-                                    <Button className='bg-primary p-2 rounded-2 border-0 text-white' onClick={handleClose2}>
-                                        Close
-                                    </Button>
-                                </Modal.Footer>
-                            </Modal>
-                        </div> */}
+                      
                     </div>
                 </div>
             </div>

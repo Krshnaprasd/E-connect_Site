@@ -42,7 +42,7 @@ const LandIcons = () => {
       try {
          const response = await axios.post(`http://localhost:6060/job/search/${page - 1}/${count}/${keyword}`); 
          setSearchResults(response.data);
-         fetchSearchCount(); ts
+         fetchSearchCount(); 
       } catch (error) {
          console.error('Error searching jobs:', error);
       }
@@ -176,7 +176,7 @@ const LandIcons = () => {
                   backgroundRepeat: 'no-repeat',
                   // optional, to control the height of the container
                }}>
-                  <div className="container pt-5 pb-5">
+                  <div className="container pt-5 pb-5" id='career'>
                      <div className="row">
                         <div className=" mainhd text-center fw-bolder">
                            <div className="d-md-block d-none" style={{ lineHeight: 1.3 }}><span className="txt">Boost&nbsp;</span>🚀<span>Your </span><span className="txt">Career </span><span style={{ wordWrap: 'break-word' }}>Where <br></br> <span style={{ wordWrap: 'break-word' }}>Dreams Meets</span> </span> <span className="txt">Jobs</span>💼</div>
@@ -204,7 +204,7 @@ const LandIcons = () => {
                            </Card>
 
                            <div>
-                              <h1 className='fw-bolder pb-5 pt-5'> Recent Jobs</h1>
+                              <h1 className='fw-bolder  pt-5'> Recent Jobs</h1>
                            </div>
                         </div>
                      </div>

@@ -213,9 +213,6 @@ const AdminPanel = () => {
             <Nav.Item>
               <Nav.Link href="/admin/ctc">Salary</Nav.Link>
             </Nav.Item>
-            <Nav.Item>
-              <Nav.Link href="admin/vacant">Job openings</Nav.Link>
-            </Nav.Item>
           </Nav>
         </div>
       </div>
