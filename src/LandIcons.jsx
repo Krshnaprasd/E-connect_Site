@@ -151,23 +151,7 @@ const LandIcons = () => {
                      <img className='img-fluid' src={user.img2}></img>
                   </div>
                </div>
-               {/* <div className="row pt-md-5 pb-md-5  justify-content-evenly" id="career">
-        
-        <div className="col-md-6 pt-5 pb-3 align-content-center order-2 ">
-        <div className="card border-0 ">
-          <button className="c-txt border-0 fs-2 fw-semibold">
-            Careers
-        </button><br></br>
-        <p style={{textAlign:'justify'}}>
-        Our Careers Portal provides an all-in-one solution for managing job opportunities and applications seamlessly. Easily post job openings, track applications, and engage with top talent through a user-friendly interface. Streamline your recruitment process, access real-time updates on applicants, and ensure a smooth hiring experience from start to finish.        
-     </p>
-     <div><a className='c-link' href="/career">Read more</a></div>
-     </div>
-        </div>
-        <div className="col-md-6 pt-5 pb-3 order-1">
-            <img className='img-fluid' src={user.img5}></img>
-        </div>
-     </div> */}
+          
 
                <div className="container-fluid pt-5 text-center" style={{
                   backgroundImage: 'url("../src/assets/edbg.jpeg")',

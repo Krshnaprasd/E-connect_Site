@@ -114,6 +114,7 @@ const SalaryDetails = () =>{
           }
         });
       });
+      
   };
   
   return (

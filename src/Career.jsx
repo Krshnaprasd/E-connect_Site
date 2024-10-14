@@ -59,7 +59,7 @@ const Career = () => {
 
     const handleSubmit = async () => {
         const userId = localStorage.getItem('id');
-
+        const jobId = job?.jobid;
      
         const formData = new FormData();
         formData.append("email", apply.email);
@@ -68,7 +68,7 @@ const Career = () => {
         formData.append("expectedctc", apply.expectedctc);
         formData.append("currentctc", apply.currentctc);
         formData.append("preferredlocation", apply.preferredlocation);
-        formData.append("jobId", job.jobid);
+        formData.append("jobId", jobId);
 
         try {
             const res = await fetch(`http://localhost:6060/user/job/apply/${userId}`, {
@@ -188,7 +188,7 @@ const Career = () => {
                                 <input
                                     type="text"
                                     name="jobName"
-                                    value={job?.jobtitle || ''}  // Display the jobName
+                                    value={job?.jobtitle || ''}  // Display the jobName 
                                     readOnly  // Make it read-only
                                     style={{ marginBottom: 5 }}
                                 />

@@ -9,10 +9,13 @@ const Profile = () => {
 
     // Employee Rendering
 
-    const [employees, setEmployee] = useState([]);
+    const [employee, setEmployee] = useState([]);
+    
+    const userid = localStorage.getItem("id")
+
 
     const fetchEmployees = () => {
-        fetch("http://localhost:6060/user/get")
+        fetch(`http://localhost:6060/user/get/${userid}`)
             .then(response => response.json())
             .then(data => {
                 console.log(data);
@@ -211,60 +214,60 @@ const Profile = () => {
     }
 
     const submitbank = () => {
-        const userId = User.userid;
-        const bankId = bank.bankId; // Ensure bankId is correctly retrieved
-        console.log(userId);
-        console.log(bankId);
-    
-        const BankData = {
-            bank: bank.bank,
-            ifsccode: bank.ifsccode,
-            pf: bank.pf,
-            esi: bank.esi,
-            branch: bank.branch,
-            accountno: bank.accountno,
-        };
-    
-        fetch(`http://localhost:6060/bank/updateBank/${userId}/${bankId}`, {
-            method: "put",
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(BankData),
-        })
-        .then((res) => {
-            if (!res.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return res.json(); // Parse the JSON response
-        })
-        .then((data) => {
-            Swal.fire({ 
-                title: 'Bank Updated Successfully', 
-                icon: 'success', 
-                confirmButtonText: 'Close' 
-            }).then(() => {
-                handleClose2(true); // Close after alert is dismissed
-            });
-            console.log(data);
-            fetchEmployees(); // Fetch the updated list or whatever is necessary
-        })
-        .catch((err) => { // Use .catch() for error handling
-            Swal.fire({ 
-                title: 'Error', 
-                text: 'Failed to update bank.', 
-                icon: 'error', 
-                confirmButtonText: 'Close' 
-            });
-            console.error(err);
+    const userId = User.userid;
+    const bankId = bank.bankId; // Ensure bankId is correctly retrieved
+    console.log(userId);
+    console.log(bankId);
+
+    const BankData = {
+        bank: bank.bank,
+        ifsccode: bank.ifsccode,
+        pf: bank.pf,
+        esi: bank.esi,
+        branch: bank.branch,
+        accountno: bank.accountno,
+    };
+
+    fetch(`http://localhost:6060/bank/updateBank/${userId}/${bankId}`, {
+        method: "put",
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(BankData),
+    })
+    .then((res) => {
+        if (!res.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return res.json(); // Parse the JSON response
+    })
+    .then((data) => {
+        Swal.fire({ 
+            title: 'Bank Updated Successfully', 
+            icon: 'success', 
+            confirmButtonText: 'Close' 
+        }).then(() => {
+            handleClose2(true); // Close after alert is dismissed
         });
-    }
-    
+        console.log(data);
+        fetchEmployees(); // Fetch the updated list or whatever is necessary
+    })
+    .catch((err) => { // Use .catch() for error handling
+        Swal.fire({ 
+            title: 'Error', 
+            text: 'Failed to update bank.', 
+            icon: 'error', 
+            confirmButtonText: 'Close' 
+        });
+        console.error(err);
+    });
+}
+
 
     return (
         <>
             <div className="container-fluid pfcard pt-5 pb-5">
                 <div className="container pt-5">
-                    {employees.map((employee) => (
-                        <div className="row row-cols-lg-4 row-cols-1 justify-content-around" key={employee.id}>
+                    
+                        <div className="row row-cols-lg-4 row-cols-1 justify-content-around" key={employee.userid}>
 
                             <div className="col-md-3 pb-5 col-sm-6 col-12">
 
@@ -395,7 +398,7 @@ const Profile = () => {
                             </div>
 
                         </div>
-                    ))}
+                  
                 </div>
             </div>
 

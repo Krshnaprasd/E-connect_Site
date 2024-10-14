@@ -66,7 +66,7 @@ const Login = () => {
 
     return (
         <>
-            <div className="container-fluid pt-5 pb-5" style={{ height: "3em" }}>
+            <div className="container-fluid pt-4 pb-5" style={{ height: "3em" }}>
                 <div className="container">
                     <div className="row">
                         <div className="col-md-6">
@@ -75,7 +75,7 @@ const Login = () => {
                         <div className="col-md-6 align-content-center">
                             <div className="row justify-content-center">
                                 <form className="card logcard  p-5 text-white " style={{width:"20em"}} onSubmit={handleSubmit}>
-                        <h1 className="txt fs-2 fw-bold text-center">E-connect</h1><br></br>
+                        <h1 className="text-white fs-2 fw-bold text-center">E-connect</h1><br></br>
                         <label className="fnt text-white-50">Name:</label>
                         <input type="text" name="name" placeholder="Name" value={User.value} onChange={handleChange}></input><br></br>
                        
@@ -83,7 +83,7 @@ const Login = () => {
                         <input type="password" name="password" placeholder="Password" value={User.value} onChange={handleChange}></input>
                         <div className="small text-white-50 text-end mt-2"><span>Forgot password !</span></div><br></br>
                         <div>
-                        <input value={User.value} className="form-check-input" name="check" type="checkbox" role="switch" onChange={handleChange}></input>&nbsp;&nbsp;<label className="txt" htmlFor="flexSwitchCheckChecked">Remember me</label><br></br><br></br>
+                        <input value={User.value} className="form-check-input" name="check" type="checkbox" role="switch" onChange={handleChange}></input>&nbsp;&nbsp;<label className="text-white-50" htmlFor="flexSwitchCheckChecked">Remember me</label><br></br><br></br>
                         
                         </div>
                         <button  className="text-white fs-5 border-0 p-1 rounded-2 bg-primary " >Submit</button>
